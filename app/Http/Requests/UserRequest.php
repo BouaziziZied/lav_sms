@@ -30,8 +30,8 @@ class UserRequest extends FormRequest
             'username' => 'sometimes|nullable|alpha_dash|min:8|max:100|unique:users',
             'photo' => 'sometimes|nullable|image|mimes:jpeg,gif,png,jpg|max:2048',
             'address' => 'required|string|min:6|max:120',
-            'state_id' => 'required',
-            'lga_id' => 'required',
+            // 'state_id' => 'required',
+            // 'lga_id' => 'required',
             'nal_id' => 'required',
         ];
         $update =  [
@@ -39,11 +39,11 @@ class UserRequest extends FormRequest
             'gender' => 'required|string',
             'phone' => 'sometimes|nullable|string|min:6|max:20',
             'phone2' => 'sometimes|nullable|string|min:6|max:20',
-            'email' => 'sometimes|nullable|email|max:100|unique:users,email,'.$this->user,
+            'email' => 'sometimes|nullable|email|max:100|unique:users,email,' . $this->user,
             'photo' => 'sometimes|nullable|image|mimes:jpeg,gif,png,jpg|max:2048',
             'address' => 'required|string|min:6|max:120',
-            'state_id' => 'required',
-            'lga_id' => 'required',
+            // 'state_id' => 'required',
+            // 'lga_id' => 'required',
             'nal_id' => 'required',
         ];
         return ($this->method() === 'POST') ? $store : $update;
@@ -62,20 +62,18 @@ class UserRequest extends FormRequest
 
     protected function getValidatorInstance()
     {
-        if($this->method() === 'POST'){
+        if ($this->method() === 'POST') {
             $input = $this->all();
 
             $input['user_type'] = Qs::decodeHash($input['user_type']);
 
             $this->getInputSource()->replace($input);
-
         }
 
-        if($this->method() === 'PUT'){
+        if ($this->method() === 'PUT') {
             $this->user = Qs::decodeHash($this->user);
         }
 
         return parent::getValidatorInstance();
-
     }
 }

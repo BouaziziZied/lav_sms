@@ -13,14 +13,15 @@
                 <div class="card-body">
                     <div class="row">
                         <div style="font-size: 16px;" class="col-md-10 offset-md-1">
-                            <p>Last modified: November 4, 2019</p>
+                            <p>Last modified: August 5, 2022</p>
 
                             <h4 class="font-weight-semibold">Introduction</h4>
 
                             <p>{{ $app_name }} ("We") respects your privacy and is committed to protecting it through our compliance with this policy.</p>
 
                             <p>This policy describes the types of information we may collect from you or that you may provide when you visit the website
-                                <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a> (our "Website") and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+                                <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a> (our "Website") and our practices for collecting, using, maintaining, protecting, and disclosing that information.
+                            </p>
 
                             <p>This policy applies to information we collect:</p>
 
@@ -29,11 +30,11 @@
                                 <li>In email, text, and other electronic messages between you and this Website.</li>
                             </ul>
 
-                           <p> Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is to not use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
+                            <p> Please read this policy carefully to understand our policies and practices regarding your information and how we will treat it. If you do not agree with our policies and practices, your choice is to not use our Website. By accessing or using this Website, you agree to this privacy policy. This policy may change from time to time (see Changes to Our Privacy Policy). Your continued use of this Website after we make changes is deemed to be acceptance of those changes, so please check the policy periodically for updates.</p>
 
                             <h4 class="font-weight-semibold">Children Under the Age of 13</h4>
 
-                           <p> We do not knowingly collect personal information from children under 13. If you are under 13, do not provide any information on this Website or on or through any of its features without first obtaining parental consent. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please call {{ $contact_phone }}</p>
+                            <p> We do not knowingly collect personal information from children under 13. If you are under 13, do not provide any information on this Website or on or through any of its features without first obtaining parental consent. If we learn we have collected or received personal information from a child under 13 without verification of parental consent, we will delete that information. If you believe we might have any information from or about a child under 13, please call {{ $contact_phone }}</p>
 
                             <h4 class="font-weight-semibold">Information We Collect About You and How We Collect It</h4>
 
@@ -128,7 +129,7 @@
 
                             <h4 class="font-weight-semibold">Changes to Our Privacy Policy</h4>
 
-                           <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, we will notify you through a notice on the Website home page. The date the privacy policy was last revised is identified at the top of the page. You are responsible for periodically visiting our Website and this privacy policy to check for any changes.</p>
+                            <p>It is our policy to post any changes we make to our privacy policy on this page. If we make material changes to how we treat our users' personal information, we will notify you through a notice on the Website home page. The date the privacy policy was last revised is identified at the top of the page. You are responsible for periodically visiting our Website and this privacy policy to check for any changes.</p>
 
                             <h4 class="font-weight-semibold">Contact Information</h4>
 
@@ -139,6 +140,6 @@
 
             </div>
         </div>
-</div>
+    </div>
 </div>
 @endsection

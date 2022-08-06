@@ -3,7 +3,7 @@
     <a href="{{ route('settings') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['settings',]) ? 'active' : '' }}"><i class="icon-gear"></i> <span>Settings</span></a>
 </li>
 
-{{--Pins--}}
+<!-- {{--Pins--}}
 <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['pins.create', 'pins.index']) ? 'nav-item-expanded nav-item-open' : '' }} ">
     <a href="#" class="nav-link"><i class="icon-lock2"></i> <span> Pins</span></a>
 
@@ -20,4 +20,4 @@
                class="nav-link {{ (Route::is('pins.index')) ? 'active' : '' }}">View Pins</a>
         </li>
     </ul>
-</li>
+</li> -->
