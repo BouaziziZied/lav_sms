@@ -13,7 +13,7 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbar-mobile">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
                 <a href="{{ route('home') }}" class="navbar-nav-link">
                     <i class="icon-home"></i>

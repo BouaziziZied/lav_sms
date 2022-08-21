@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="utf-8">
@@ -13,9 +13,9 @@
 </head>
 
 <body>
-@include('partials.login.header')
-@yield('content')
-@include('partials.login.footer')
+    @include('partials.login.header')
+    @yield('content')
+    @include('partials.login.footer')
 
 </body>
 
