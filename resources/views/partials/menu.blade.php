@@ -20,7 +20,7 @@
         <div class="sidebar-user">
             <div class="card-body">
                 <div class="media">
-                    <div class="mr-3">
+                    <div class="ml-3">
                         <a href="{{ route('my_account') }}"><img src="{{ Auth::user()->photo }}" width="38" height="38" class="rounded-circle" alt="photo"></a>
                     </div>
 
@@ -31,7 +31,7 @@
                         </div>
                     </div>
 
-                    <div class="ml-3 align-self-center">
+                    <div class="mr-5 align-self-center">
                         <a href="{{ route('my_account') }}" class="text-white"><i class="icon-cog3"></i></a>
                     </div>
                 </div>
@@ -40,14 +40,14 @@
         <!-- /user menu -->
 
         <!-- Main navigation -->
-        <div class="card card-sidebar-mobile">
+        <div class="card card-sidebar-mobile" style="margin-right: -40px;">
             <ul class="nav nav-sidebar" data-nav-type="accordion">
 
                 <!-- Main -->
                 <li class="nav-item">
                     <a href="{{ route('dashboard') }}" class="nav-link {{ (Route::is('dashboard')) ? 'active' : '' }}">
-                        <i class="icon-home4"></i>
-                        <span>Dashboard</span>
+                        <i class="icon-home4 ml-3"></i>
+                        <span>الصفحة الرئيسية</span>
                     </a>
                 </li>
 
@@ -93,25 +93,26 @@
                 {{--Manage Students--}}
                 @if(Qs::userIsTeamSAT())
                 <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-users"></i> <span> Students</span></a>
+                    <a href="#" class="nav-link"><i class="icon-users ml-3"></i> <span> الطلاب</span></a>
 
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
                         {{--Admit Student--}}
                         @if(Qs::userIsTeamSA())
                         <li class="nav-item">
-                            <a href="{{ route('students.create') }}" class="nav-link {{ (Route::is('students.create')) ? 'active' : '' }}">Admit Student</a>
+                            <a href="{{ route('students.create') }}" class="nav-link {{ (Route::is('students.create')) ? 'active' : '' }}">إضافة طالب</a>
                         </li>
                         @endif
 
                         {{--Student Information--}}
                         <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'nav-item-expanded' : '' }}">
-                            <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">Student Information</a>
+                            <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;بيانات الطلاب</a>
                             <ul class="nav nav-group-sub">
                                 @foreach(App\Models\MyClass::orderBy('name')->get() as $c)
                                 <li class="nav-item"><a href="{{ route('students.list', $c->id) }}" class="nav-link ">{{ $c->name }}</a></li>
                                 @endforeach
                             </ul>
                         </li>
+
 
                         <!-- @if(Qs::userIsTeamSA())
 
@@ -132,15 +133,55 @@
                 </li>
                 @endif
 
-                @if(Qs::userIsTeamSA())
-                {{--Manage Users--}}
-                <li class="nav-item">
-                    <a href="{{ route('users.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.index', 'users.show', 'users.edit']) ? 'active' : '' }}"><i class="icon-users4"></i> <span> Users</span></a>
+                {{--Manage Students--}}
+                @if(Qs::userIsTeamSAT())
+                <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
+                    <a href="#" class="nav-link"><i class="icon-users ml-3"></i> <span> الغيابات</span></a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
+                        {{--Student Information--}}
+                        <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'nav-item-expanded' : '' }}">
+                            <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;التأخير الصباحي</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="#" class="nav-link ">تنبيه كتابي</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تعهد الطالب</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تحويل التأخير</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">اخطار التأخير</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">نموذج المخالفة</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
+                        {{--Student Information--}}
+                        <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'nav-item-expanded' : '' }}">
+                            <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;الغياب</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="#" class="nav-link ">تنبيه كتابي</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تعهد الطالب</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تحويل الغياب</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">اخطار الغياب</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
+                        {{--Student Information--}}
+                        <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'nav-item-expanded' : '' }}">
+                            <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;خروج</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="#" class="nav-link ">كشف خروج الطلاب من القسم</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">كشف خروج الطلاب من المدرسة</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">نموذج خروج طالب من المدرسة</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
+                @endif
 
                 {{--Manage Classes--}}
                 <li class="nav-item">
-                    <a href="{{ route('classes.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['classes.index','classes.edit']) ? 'active' : '' }}"><i class="icon-windows2"></i> <span> Classes</span></a>
+                    <a href="{{ route('classes.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['classes.index','classes.edit']) ? 'active' : '' }}"><i class="icon-windows2 ml-3"></i> <span> الصفوف</span></a>
                 </li>
 
                 <!-- {{--Manage Dorms--}}
@@ -150,14 +191,21 @@
 
                 {{--Manage Sections--}}
                 <li class="nav-item">
-                    <a href="{{ route('sections.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['sections.index','sections.edit',]) ? 'active' : '' }}"><i class="icon-fence"></i> <span>Sections</span></a>
+                    <a href="{{ route('sections.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['sections.index','sections.edit',]) ? 'active' : '' }}"><i class="icon-fence ml-3"></i> <span>الفئات</span></a>
                 </li>
 
                 {{--Manage Subjects--}}
                 <li class="nav-item">
-                    <a href="{{ route('subjects.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['subjects.index','subjects.edit',]) ? 'active' : '' }}"><i class="icon-pin"></i> <span>Subjects</span></a>
+                    <a href="{{ route('subjects.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['subjects.index','subjects.edit',]) ? 'active' : '' }}"><i class="icon-pin ml-3"></i> <span>المواد</span></a>
+                </li>
+
+                @if(Qs::userIsTeamSA())
+                {{--Manage Users--}}
+                <li class="nav-item">
+                    <a href="{{ route('users.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.index', 'users.show', 'users.edit']) ? 'active' : '' }}"><i class="icon-users4 ml-3"></i> <span> المستخدمون</span></a>
                 </li>
                 @endif
+
 
                 <!-- {{--Exam--}}
                 @if(Qs::userIsTeamSAT())
