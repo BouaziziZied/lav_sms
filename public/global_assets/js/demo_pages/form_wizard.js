@@ -138,9 +138,9 @@ var FormWizard = function() {
             bodyTag: 'fieldset',
             titleTemplate: '<span class="number">#index#</span> #title#',
             labels: {
-                previous: '<i class="icon-arrow-left13 mr-2" /> Previous',
-                next: 'Next <i class="icon-arrow-right14 ml-2" />',
-                finish: 'Submit form <i class="icon-arrow-right14 ml-2" />'
+                previous: '<i class="icon-arrow-left13 mr-2" /> السابق',
+                next: 'التالي <i class="icon-arrow-right14 ml-2" />',
+                finish: 'حفض <i class="icon-arrow-right14 ml-2" />'
             },
             transitionEffect: 'fade',
             autoFocus: true,
