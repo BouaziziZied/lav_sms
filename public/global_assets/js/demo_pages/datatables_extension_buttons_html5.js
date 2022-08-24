@@ -29,9 +29,9 @@ var DatatableButtonsHtml5 = function() {
             autoWidth: false,
             dom: '<"datatable-header"fBl><"datatable-scroll"t><"datatable-footer"ip>',
             language: {
-                search: '<span>Filter:</span> _INPUT_',
-                searchPlaceholder: 'Type to filter...',
-                lengthMenu: '<span>Show:</span> _MENU_',
+                search: '<span>بحث:</span> _INPUT_',
+                searchPlaceholder: 'اكتب للبحث...',
+                lengthMenu: '<span>عرض:</span> _MENU_',
                 paginate: { 'first': 'First', 'last': 'Last', 'next': $('html').attr('dir') == 'rtl' ? '&larr;' : '&rarr;', 'previous': $('html').attr('dir') == 'rtl' ? '&rarr;' : '&larr;' }
             }
         });
@@ -84,22 +84,22 @@ var DatatableButtonsHtml5 = function() {
         $('.datatable-button-html5-columns').DataTable({
             buttons: {            
                 buttons: [
+                    // {
+                    //     extend: 'copyHtml5',
+                    //     className: 'btn btn-light'
+                    // },
                     {
-                        extend: 'copyHtml5',
-                        className: 'btn btn-light'
-                    },
-                    {
-                        extend: 'excelHtml5',
-                        className: 'btn btn-light'
+                        extend: 'colvis',
+                        text: '<i class="icon-three-bars"></i> إظهار',
+                        className: 'btn bg-blue btn-icon dropdown-toggle'
                     },
                     {
                         extend: 'pdfHtml5',
                         className: 'btn btn-light'
                     },
                     {
-                        extend: 'colvis',
-                        text: '<i class="icon-three-bars"></i> Visibility',
-                        className: 'btn bg-blue btn-icon dropdown-toggle'
+                        extend: 'excelHtml5',
+                        className: 'btn btn-light'
                     }
                 ]
             }

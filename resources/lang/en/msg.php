@@ -1,7 +1,7 @@
 <?php
 return
     [
-        'denied' => 'ACCESS DENIED FOR UNAUTHORIZED ACTION',
+        'denied' => 'تم رفض الوصول بسبب عمل غير مصرح به',
         'user_invalid' => 'Both Username and Email cannot be blank',
         'update_ok' => 'تم التحديث بنجاح',
         'store_ok' => 'تم الحفض بنجاح',

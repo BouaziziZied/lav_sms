@@ -55,21 +55,21 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>البريد الإلكتروني: </label>
                                     <input value="{{ old('email') }}" type="email" name="email" class="form-control" placeholder="البريد الإلكتروني">
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>اسم المستخدم: </label>
                                     <input value="{{ old('username') }}" type="text" name="username" class="form-control" placeholder="اسم المستخدم">
                                 </div>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>الهاتف:</label>
                                     <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="الهاتف">
