@@ -3,7 +3,7 @@ return
     [
         'denied' => 'ACCESS DENIED FOR UNAUTHORIZED ACTION',
         'user_invalid' => 'Both Username and Email cannot be blank',
-        'update_ok' => 'Record Updated Successfully',
+        'update_ok' => 'تم التحديث بنجاح',
         'store_ok' => 'تم الحفض بنجاح',
         'del_ok' => 'Record Deleted Successfully',
         'delete_ok' => 'Record Deleted Successfully',

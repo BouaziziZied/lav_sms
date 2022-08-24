@@ -21,7 +21,7 @@ class ClassCreate extends FormRequest
     {
         return [
             'name' => 'required|string|min:3',
-            'class_type_id' => 'required|exists:class_types,id',
+            'class_type_id' => 'exists:class_types,id',
         ];
     }
 
@@ -31,5 +31,4 @@ class ClassCreate extends FormRequest
             'class_type_id' => 'Class Type',
         ];
     }
-
 }

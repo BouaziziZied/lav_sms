@@ -181,7 +181,7 @@
 
                 {{--Manage Classes--}}
                 <li class="nav-item">
-                    <a href="{{ route('classes.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['classes.index','classes.edit']) ? 'active' : '' }}"><i class="icon-windows2 ml-3"></i> <span> الصفوف</span></a>
+                    <a href="{{ route('classes.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['classes.index','classes.edit']) ? 'active' : '' }}"><i class="icon-windows2 ml-3"></i> <span> الأقسام</span></a>
                 </li>
 
                 <!-- {{--Manage Dorms--}}
@@ -191,13 +191,13 @@
 
                 {{--Manage Sections--}}
                 <li class="nav-item">
-                    <a href="{{ route('sections.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['sections.index','sections.edit',]) ? 'active' : '' }}"><i class="icon-fence ml-3"></i> <span>الفئات</span></a>
+                    <a href="{{ route('sections.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['sections.index','sections.edit',]) ? 'active' : '' }}"><i class="icon-fence ml-3"></i> <span>الصفوف</span></a>
                 </li>
 
-                {{--Manage Subjects--}}
+                <!-- {{--Manage Subjects--}}
                 <li class="nav-item">
                     <a href="{{ route('subjects.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['subjects.index','subjects.edit',]) ? 'active' : '' }}"><i class="icon-pin ml-3"></i> <span>المواد</span></a>
-                </li>
+                </li> -->
 
                 @if(Qs::userIsTeamSA())
                 {{--Manage Users--}}
