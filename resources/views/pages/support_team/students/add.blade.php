@@ -86,7 +86,7 @@
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label class="d-block">الصورة:</label>
+                        <label class="d-block">تحميل الصورة:</label>
                         <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
                         <span class="form-text text-muted">الصور المقبولة: png ،jpeg، الحد الأقصى لحجم الصورة 2Mb.</span>
                     </div>

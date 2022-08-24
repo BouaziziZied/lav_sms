@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('page_title', 'Manage System Settings')
+@section('page_title', 'إدارة إعدادات النظام')
 @section('content')
 
-<div class="card">
+<div class="card text-right">
     <div class="card-header header-elements-inline">
-        <h6 class="card-title font-weight-semibold">Update System Settings </h6>
+        <h6 class="card-title font-weight-semibold">تحديث إعدادات النظام </h6>
         {!! Qs::getPanelOptions() !!}
     </div>
 
@@ -14,31 +14,31 @@
             <div class="row">
                 <div class="col-md-6 border-right-2 border-right-blue-400">
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">Name of School <span class="text-danger">*</span></label>
+                        <label class="col-lg-3 col-form-label font-weight-semibold">اسم المدرسة <span class="text-danger">*</span></label>
                         <div class="col-lg-9">
-                            <input name="system_name" value="{{ $s['system_name'] }}" required type="text" class="form-control" placeholder="Name of School">
+                            <input name="system_name" value="{{ $s['system_name'] }}" required type="text" class="form-control" placeholder="اسم المدرسة">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="current_session" class="col-lg-3 col-form-label font-weight-semibold">Current Session <span class="text-danger">*</span></label>
+                        <label for="current_session" class="col-lg-3 col-form-label font-weight-semibold">السنة الدراسية <span class="text-danger">*</span></label>
                         <div class="col-lg-9">
-                            <select data-placeholder="Choose..." required name="current_session" id="current_session" class="select-search form-control">
+                            <select data-placeholder="إختر..." required name="current_session" id="current_session" class="select-search form-control">
                                 <option value=""></option>
-                                @for($y=date('Y', strtotime('- 3 years')); $y<=date('Y', strtotime('+ 1 years')); $y++) <option {{ ($s['current_session'] == (($y-=1).'-'.($y+=1))) ? 'selected' : '' }}>{{ ($y-=1).'-'.($y+=1) }}</option>
+                                @for($y=date('Y', strtotime('- 3 years')); $y<=date('Y', strtotime('+ 1 years')); $y++) <option {{ ($s['current_session'] == (($y-=1).'-'.($y+=1))) ? 'selected' : '' }}>{{ ($y+=1).'-'.($y-=1) }}</option>
                                     @endfor
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">School Acronym</label>
+                        <label class="col-lg-3 col-form-label font-weight-semibold">إختصار المدرسة</label>
                         <div class="col-lg-9">
-                            <input name="system_title" value="{{ $s['system_title'] }}" type="text" class="form-control" placeholder="School Acronym">
+                            <input name="system_title" value="{{ $s['system_title'] }}" type="text" class="form-control" placeholder="إختصار المدرسة">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">Phone</label>
+                        <label class="col-lg-3 col-form-label font-weight-semibold">الهاتف</label>
                         <div class="col-lg-9">
-                            <input name="phone" value="{{ $s['phone'] }}" type="text" class="form-control" placeholder="Phone">
+                            <input name="phone" value="{{ $s['phone'] }}" type="text" class="form-control" placeholder="الهاتف">
                         </div>
                     </div>
                     <!-- <div class="form-group row">
@@ -86,33 +86,33 @@
                 </div>
                 <div class="col-md-6">
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">School Email</label>
-                        <div class="col-lg-9">
-                            <input name="system_email" value="{{ $s['system_email'] }}" type="email" class="form-control" placeholder="School Email">
+                        <label class="col-lg-4 col-form-label font-weight-semibold">البريد الإلكتروني للمدرسة</label>
+                        <div class="col-lg-8">
+                            <input name="system_email" value="{{ $s['system_email'] }}" type="email" class="form-control" placeholder="البريد الإلكتروني للمدرسة">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">School Address <span class="text-danger">*</span></label>
-                        <div class="col-lg-9">
-                            <input required name="address" value="{{ $s['address'] }}" type="text" class="form-control" placeholder="School Address">
+                        <label class="col-lg-4 col-form-label font-weight-semibold">عنوان المدرسة <span class="text-danger">*</span></label>
+                        <div class="col-lg-8">
+                            <input required name="address" value="{{ $s['address'] }}" type="text" class="form-control" placeholder="عنوان المدرسة">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">This Term Ends</label>
-                        <div class="col-lg-6">
-                            <input name="term_ends" value="{{ $s['term_ends'] }}" type="text" class="form-control date-pick" placeholder="Date Term Ends">
+                        <label class="col-lg-4 col-form-label font-weight-semibold">ينتهي هذا الفصل</label>
+                        <div class="col-lg-5">
+                            <input name="term_ends" value="{{ $s['term_ends'] }}" type="text" class="form-control date-pick" placeholder="تاريخ انتهاء الفصل">
                         </div>
                         <div class="col-lg-3 mt-2">
-                            <span class="font-weight-bold font-italic">M-D-Y or M/D/Y </span>
+                            <span class="font-weight-bold font-italic">ي/ش/س </span>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-lg-3 col-form-label font-weight-semibold">Next Term Begins</label>
-                        <div class="col-lg-6">
-                            <input name="term_begins" value="{{ $s['term_begins'] }}" type="text" class="form-control date-pick" placeholder="Date Term Ends">
+                        <label class="col-lg-4 col-form-label font-weight-semibold">يبدأ الفصل التالي</label>
+                        <div class="col-lg-5">
+                            <input name="term_begins" value="{{ $s['term_begins'] }}" type="text" class="form-control date-pick" placeholder="تاريخ انتهاء الفصل">
                         </div>
                         <div class="col-lg-3 mt-2">
-                            <span class="font-weight-bold font-italic">M-D-Y or M/D/Y </span>
+                            <span class="font-weight-bold font-italic">ي/ش/س </span>
                         </div>
                     </div>
 
@@ -146,7 +146,7 @@
             <hr class="divider">
 
             <div class="text-right">
-                <button type="submit" class="btn btn-danger">Submit form <i class="icon-paperplane ml-2"></i></button>
+                <button type="submit" class="btn btn-danger">حفض <i class="icon-paperplane ml-2"></i></button>
             </div>
         </form>
     </div>
