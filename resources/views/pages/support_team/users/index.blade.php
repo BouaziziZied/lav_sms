@@ -15,7 +15,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">ادارة المستخدمين</a>
                 <div class="dropdown-menu dropdown-menu-right">
                     @foreach($user_types as $ut)
-                    <a href="#ut-{{ Qs::hash($ut->id) }}" class="dropdown-item" data-toggle="tab">{{ $ut->name }}s</a>
+                    <a href="#ut-{{ Qs::hash($ut->id) }}" class="dropdown-item" data-toggle="tab">{{ $ut->name }}</a>
                     @endforeach
                 </div>
             </li>
