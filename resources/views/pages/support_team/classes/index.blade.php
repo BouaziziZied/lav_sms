@@ -30,7 +30,6 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $c->name }}</td>
-                            <!-- <td>{{ $c->class_type->name }}</td> -->
                             <td class="text-center">
                                 <div class="list-icons">
                                     <div class="dropdown">
@@ -60,7 +59,7 @@
             </div>
 
             <div class="tab-pane fade" id="new-class">
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-md-12">
                         <div class="alert alert-info border-0 alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
@@ -68,7 +67,7 @@
                             <span>عند إنشاء قسم، سيتم إنشاء فصل تلقائيا للقسم، ويمكنك تعديله أو إضافة المزيد من الفصول إلى القسم في <a target="_blank" href="{{ route('sections.index') }}">إدارة الفصول</a></span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-md-6">
