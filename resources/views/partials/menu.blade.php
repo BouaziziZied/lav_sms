@@ -64,12 +64,12 @@
                     </li>
                     @endif -->
 
-                <!-- {{--Administrative--}}
+                {{--Administrative--}}
                 @if(Qs::userIsAdministrative())
-                <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['payments.index', 'payments.create', 'payments.invoice', 'payments.receipts', 'payments.edit', 'payments.manage', 'payments.show',]) ? 'nav-item-expanded nav-item-open' : '' }} ">
-                    <a href="#" class="nav-link"><i class="icon-office"></i> <span> Administrative</span></a>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-office"></i> <span>&emsp;&emsp;الإدارة</span></a>
 
-                    <ul class="nav nav-group-sub" data-submenu-title="Administrative">
+                    <!-- <ul class="nav nav-group-sub" data-submenu-title="Administrative">
 
                         {{--Payments--}}
                         @if(Qs::userIsTeamAccount())
@@ -86,9 +86,23 @@
 
                         </li>
                         @endif
+                    </ul> -->
+
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Delays">
+                        {{--Manage Delays--}}
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">&emsp;&emsp;التأخير الصباحي</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="#" class="nav-link ">تنبيه كتابي</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تعهد الطالب</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">تحويل التأخير</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">اخطار التأخير</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link ">نموذج المخالفة</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
-                @endif -->
+                @endif
 
                 {{--Manage Students--}}
                 @if(Qs::userIsTeamSAT())
