@@ -140,6 +140,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('exams', 'ExamController');
         Route::resource('dorms', 'DormController');
         Route::resource('payments', 'PaymentController');
+        Route::resource('delaywarnings', 'DelayWarningController');
     });
 
     /************************ AJAX ****************************/

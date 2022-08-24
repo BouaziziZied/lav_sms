@@ -93,7 +93,7 @@
                         <li class="nav-item nav-item-submenu">
                             <a href="#" class="nav-link">&emsp;&emsp;التأخير الصباحي</a>
                             <ul class="nav nav-group-sub">
-                                <li class="nav-item"><a href="#" class="nav-link ">تنبيه كتابي</a></li>
+                                <li class="nav-item"><a href="{{ route('delaywarnings.index') }}" class="nav-link ">تنبيه كتابي</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">تعهد الطالب</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">تحويل التأخير</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">اخطار التأخير</a></li>
