@@ -22,7 +22,9 @@ class DelayWarningController extends Controller
 
     public function index()
     {
-        return view('pages.support_team.delays.warnings.index');
+        $d['delay_warnings'] = $this->delay_warning->all();
+
+        return view('pages.support_team.delays.warnings.index', $d);
     }
 
     public function create()

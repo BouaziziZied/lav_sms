@@ -25,12 +25,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($delay_warnings as $w)
                         <tr>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $w->name }}</td>
                             <td class="text-center">
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
