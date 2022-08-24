@@ -133,7 +133,7 @@
                 </li>
                 @endif
 
-                {{--Manage Students--}}
+                <!-- {{--Manage Students--}}
                 @if(Qs::userIsTeamSAT())
                 <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.create', 'students.list', 'students.edit', 'students.show', 'students.promotion', 'students.promotion_manage', 'students.graduated']) ? 'nav-item-expanded nav-item-open' : '' }} ">
                     <a href="#" class="nav-link"><i class="icon-users ml-3"></i> <span> الغيابات</span></a>
@@ -143,7 +143,7 @@
                         <li class="nav-item nav-item-submenu {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'nav-item-expanded' : '' }}">
                             <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['students.list', 'students.edit', 'students.show']) ? 'active' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;التأخير الصباحي</a>
                             <ul class="nav nav-group-sub">
-                                <li class="nav-item"><a href="{{ route('delays.create') }}" class="nav-link ">تنبيه كتابي</a></li>
+                                <li class="nav-item"><a href="" class="nav-link ">تنبيه كتابي</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">تعهد الطالب</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">تحويل التأخير</a></li>
                                 <li class="nav-item"><a href="#" class="nav-link ">اخطار التأخير</a></li>
@@ -177,7 +177,7 @@
                         </li>
                     </ul>
                 </li>
-                @endif
+                @endif -->
 
                 {{--Manage Classes--}}
                 <li class="nav-item">
