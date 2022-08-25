@@ -16,6 +16,13 @@ class CreateDelayWarningsTable extends Migration
         Schema::create('delay_warnings', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
+            $table->string('section')->nullable();
+            $table->string('day')->nullable();
+            $table->string('date')->nullable();
+            $table->string('hour')->nullable();
+            $table->string('student_signature')->nullable();
+            $table->string('parent_phone')->nullable();
+            $table->string('parent_statement')->nullable();
             $table->timestamps();
         });
     }
