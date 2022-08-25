@@ -30,6 +30,28 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $w->name }}</td>
                             <td class="text-center">
+                                <!-- {{--Receipt--}}
+                                <a target="_blank" href="" class="dropdown-item"><i class="icon-printer"></i> طباعة الإنذار</a> -->
+                                <div class="list-icons">
+                                    <div class="dropdown">
+                                        <a href="#" class="list-icons-item" data-toggle="dropdown">
+                                            <i class="icon-menu9"></i>
+                                        </a>
+
+                                        <div class="dropdown-menu dropdown-menu-left">
+                                            @if(Qs::userIsTeamSA())
+                                            {{--Edit--}}
+                                            <a href="{{ route('delaywarnings.edit', $w->id) }}" class="dropdown-item"><i class="icon-pencil"></i> تعديل</a>
+                                            @endif
+                                            @if(Qs::userIsSuperAdmin())
+                                            {{--Delete--}}
+                                            <a id="{{ $w->id }}" onclick="confirmDelete(this.id)" href="#" class="dropdown-item"><i class="icon-trash"></i> حذف</a>
+                                            <form method="post" id="item-delete-{{ $w->id }}" action="{{ route('delaywarnings.destroy', $w->id) }}" class="hidden">@csrf @method('delete')</form>
+                                            @endif
+
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
                         @endforeach

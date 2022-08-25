@@ -5,6 +5,7 @@ namespace App\Http\Controllers\SupportTeam;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\DelayWarning\DelayWarningCreate;
+use App\Http\Requests\DelayWarning\DelayWarningUpdate;
 use App\Helpers\Qs;
 use App\Repositories\DelayWarningRepo;
 
@@ -47,16 +48,22 @@ class DelayWarningController extends Controller
 
     public function edit($id)
     {
-        //
+        $d['w'] = $w = $this->delay_warning->find($id);
+
+        return is_null($w) ? Qs::goWithDanger('delaywarnings.index') : view('pages.support_team.delays.warnings.edit', $d);
     }
 
-    public function update(Request $request, $id)
+    public function update(DelayWarningUpdate $req, $id)
     {
-        //
+        $data = $req->only(['name']);
+        $this->delay_warning->update($id, $data);
+
+        return Qs::jsonUpdateOk();
     }
 
     public function destroy($id)
     {
-        //
+        $this->delay_warning->delete($id);
+        return back()->with('flash_success', __('msg.del_ok'));
     }
 }
