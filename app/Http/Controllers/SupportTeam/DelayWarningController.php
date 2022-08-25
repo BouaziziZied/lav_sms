@@ -66,4 +66,9 @@ class DelayWarningController extends Controller
         $this->delay_warning->delete($id);
         return back()->with('flash_success', __('msg.del_ok'));
     }
+
+    public function print($pr_id)
+    {
+        return view('pages.support_team.delays.warnings.print');
+    }
 }

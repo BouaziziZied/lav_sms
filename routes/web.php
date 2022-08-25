@@ -91,6 +91,12 @@ Route::group(['middleware' => 'auth'], function () {
             Route::post('pay_now/{id}', 'PaymentController@pay_now')->name('payments.pay_now');
         });
 
+        /*************** Delay Warnings *****************/
+        Route::group(['prefix' => 'payments'], function () {
+
+            Route::get('delaywarningprint/{id}', 'DelayWarningController@print')->name('delaywarnings.print');
+        });
+
         /*************** Pins *****************/
         Route::group(['prefix' => 'pins'], function () {
             Route::get('create', 'PinController@create')->name('pins.create');

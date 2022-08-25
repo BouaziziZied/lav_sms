@@ -40,6 +40,10 @@
 
                                         <div class="dropdown-menu dropdown-menu-left">
                                             @if(Qs::userIsTeamSA())
+                                            {{--Print--}}
+                                            <a target="_blank" href="{{ route('delaywarnings.print', Qs::hash($w->id)) }}" class="dropdown-item"><i class="icon-printer"></i> طباعة الإنذار</a>
+                                            @endif
+                                            @if(Qs::userIsTeamSA())
                                             {{--Edit--}}
                                             <a href="{{ route('delaywarnings.edit', $w->id) }}" class="dropdown-item"><i class="icon-pencil"></i> تعديل</a>
                                             @endif
