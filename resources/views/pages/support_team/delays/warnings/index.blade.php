@@ -31,8 +31,8 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $w->name }}</td>
-                            <td>{{ $w->name }}</td>
-                            <td>{{ $w->name }}</td>
+                            <td>{{ $w->section }}</td>
+                            <td>{{ $w->date }}</td>
                             <td class="text-center">
                                 <!-- {{--Receipt--}}
                                 <a target="_blank" href="" class="dropdown-item"><i class="icon-printer"></i> طباعة الإنذار</a> -->
@@ -97,7 +97,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>التاريخ:</label>
-                                <input name="dod" value="{{ old('dod') }}" type="text" class="form-control date-pick" placeholder="إختر التاريخ...">
+                                <input name="date" value="{{ old('date') }}" type="text" class="form-control date-pick" placeholder="إختر التاريخ...">
 
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>توقيع الطالب: </label>
-                                <input type="text" value="{{ old('signature') }}" name="signature" class="form-control" placeholder="توقيع الطالب">
+                                <input type="text" value="{{ old('signature') }}" name="student_signature" class="form-control" placeholder="توقيع الطالب">
                             </div>
                         </div>
 

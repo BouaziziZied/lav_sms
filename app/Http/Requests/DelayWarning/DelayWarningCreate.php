@@ -21,6 +21,8 @@ class DelayWarningCreate extends FormRequest
     {
         return [
             'name' => 'required|string|min:3',
+            'section' => 'sometimes|nullable|string',
+            'date' => 'sometimes|nullable|string',
         ];
     }
 
