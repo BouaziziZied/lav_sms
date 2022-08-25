@@ -1,7 +1,7 @@
 <html dir="rtl" lang="ar">
 
 <head>
-    <title>إنذار كتابي</title>
+    <title>إنذار كتابي - {{ $w->name }}</title>
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/receipt.css') }}" />
 </head>
 
@@ -44,15 +44,15 @@
             <div style="float: right; margin-right: 75px;">
                 <table style="font-size: 25px" class="td-right">
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">اليوم :</td>
-                        <td class="bold">التاريــخ :</td>
+                        <td class="bold" style="padding-left: 250px;">اليوم : {{ $w->day }}</td>
+                        <td class="bold">التاريــخ : {{ $w->date }}</td>
                     </tr>
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">اسم الطالب :</td>
-                        <td class="bold">الصـف :</td>
+                        <td class="bold" style="padding-left: 250px;">اسم الطالب : {{ $w->name }}</td>
+                        <td class="bold">الصـف : {{ $w->section }}</td>
                     </tr>
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">وقت الحضور الساعة :</td>
+                        <td class="bold" style="padding-left: 250px;">وقت الحضور الساعة : {{ $w->hour }}</td>
                     </tr>
                 </table>
             </div>
@@ -66,13 +66,13 @@
             <div style="float: right; margin-right: 75px;">
                 <table class="td-right" style="font-size: 25px" cellspacing="2" cellpadding="2">
                     <tr>
-                        <td class="bold">توقيع الطالب : </td>
+                        <td class="bold">توقيع الطالب : {{ $w->student_signature }}</td>
                     </tr>
                     <tr>
-                        <td class="bold"> تليفــون ولي الأمر :</td>
+                        <td class="bold"> تليفــون ولي الأمر : {{ $w->parent_phone }}</td>
                     </tr>
                     <tr>
-                        <td class="bold">إفادة ولي الأمر :</td>
+                        <td class="bold">إفادة ولي الأمر : {{ $w->parent_statement }}</td>
                     </tr>
                 </table>
             </div>
