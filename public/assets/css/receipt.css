@@ -49,8 +49,8 @@ td {
     text-align: center;
 }
 
-table.td-left td {
-    text-align: left !important;
+table.td-right td {
+    text-align: right !important;
     padding: 5px;
 }
 

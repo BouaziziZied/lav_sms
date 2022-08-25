@@ -1,4 +1,4 @@
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
     <title>إنذار كتابي - {{ $w->name }}</title>
@@ -9,16 +9,15 @@
     <div class="container">
         <div id="print" xmlns:margin-top="http://www.w3.org/1999/xhtml">
             {{--Photo--}}
-            <div style="margin: 15px;">
-                <img src="{{ asset('global_assets/images/logo_warning.jpg') }}" alt="...">
+            <div style="margin: 25px;">
+                <img src="{{ asset('global_assets/images/logo_warning.jpg') }}" alt="">
             </div>
 
-            {{-- School Details--}}
+            {{-- warning Title--}}
             <table width="100%">
                 <tr>
-
                     <td>
-                        <div class="bold arial" style="text-align: center; float:right; width: 200px; padding: 25px; margin-right:325px">
+                        <div class="bold arial" style="text-align: center; float:right; width: 200px; margin-right:325px">
                             <div style="padding: 10px 20px; width: 200px; background-color: #fff2cc;">
                                 <span style="color: #000; font-weight: bold; font-size: 35px;"> تنبيه كتابي</span>
                             </div>
@@ -33,7 +32,7 @@
             </div>
 
             {{--Receipt No --}}
-            <div class="bold arial" style="text-align: center; float:right; width: 200px; padding-top: 15px; padding-bottom: 50px; margin-right:185px">
+            <div class="bold arial" style="text-align: center; float:right; width: 200px; padding-top: 15px; padding-bottom: 50px; margin-right: 125px;">
                 <div style="padding: 10px 20px; width: 300px; background-color: #fff2cc;">
                     <span style="font-size: 25px;">التأخر عن الدوام الدراسي</span>
                 </div>
@@ -41,18 +40,18 @@
 
             <div style="clear: both"></div>
 
-            <div style="float: right; margin-right: 75px;">
+            <div style="float: right; margin-right: 50px;">
                 <table style="font-size: 25px" class="td-right">
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">اليوم : {{ $w->day }}</td>
+                        <td class="bold">اليوم : {{ $w->day }}</td>
                         <td class="bold">التاريــخ : {{ $w->date }}</td>
                     </tr>
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">اسم الطالب : {{ $w->name }}</td>
+                        <td class="bold" style="padding-left: 150px;">اسم الطالب : {{ $w->name }}</td>
                         <td class="bold">الصـف : {{ $w->section }}</td>
                     </tr>
                     <tr>
-                        <td class="bold" style="padding-left: 250px;">وقت الحضور الساعة : {{ $w->hour }}</td>
+                        <td class="bold" style="padding-left: 150px;">وقت الحضور الساعة : {{ $w->hour }}</td>
                     </tr>
                 </table>
             </div>
@@ -63,7 +62,7 @@
                 <span style="font-weight:bold; font-size: 25px; color: #000; padding-right: 10px">أتعهــد بعــدم تكرار التأخيـــر عن الدوام الدراسي، والحضور إلــى المدرسة قبل الساعــة السابعــة صباحاً وحضور الطابــور الصباحـــي في وقته المحدد وفي حالة تكرار ذلك سوف تقوم إدارة المدرسة باتخاذ الإجراءات المتبعة حسب اللوائح والقوانين الخاصة بالمدرسة ووزارة التربية و التعليم والتعليم العالي.</span>
             </div>
 
-            <div style="float: right; margin-right: 75px;">
+            <div style="float: right; margin-right: 50px;">
                 <table class="td-right" style="font-size: 25px" cellspacing="2" cellpadding="2">
                     <tr>
                         <td class="bold">توقيع الطالب : {{ $w->student_signature }}</td>
@@ -78,7 +77,7 @@
             </div>
             <div class="clear"></div>
 
-            <table class="td-rigth" style="font-size: 25px; margin-top: 50px; margin-bottom:50px;" width="100%" cellspacing="2" cellpadding="2">
+            <table class="td-rigth" style="font-size: 25px; margin-top: 50px; margin-bottom:75px;" width="100%" cellspacing="2" cellpadding="2">
                 <thead>
                     <tr>
                         <td class="bold" style="padding-right: 50px;">المشرف الإداري</td>
@@ -99,8 +98,8 @@
             </table>
 
             {{-- Student Info --}}
-            <div style="margin:50px; display: block; background-color: #fff2cc; padding: 15px; ">
-                <span style="font-weight:bold; font-size: 23px; color: #000; padding-right: 35px;">رؤية الوزارة: الريادة في توفير فرص تعلُّم دائمة ومبتكرة وذات جودة عالية للمجتمع القطري</span>
+            <div style="margin:50px; display: block; background-color: #fff2cc; padding: 15px;">
+                <span style="font-weight:bold; font-size: 23px; color: #c00000; margin-right: 25px;">رؤية الوزارة: </span><span style="font-weight:bold; font-size: 23px; color: #000;">الريادة في توفير فرص تعلُّم دائمة ومبتكرة وذات جودة عالية للمجتمع القطري</span>
             </div>
             <div class="clear"></div>
         </div>
