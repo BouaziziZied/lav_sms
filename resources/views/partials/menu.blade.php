@@ -69,7 +69,7 @@
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-office"></i> <span>&emsp;&emsp;الإدارة</span></a>
 
-                    <ul class="nav nav-group-sub" data-submenu-title="Administrative">
+                    <!-- <ul class="nav nav-group-sub" data-submenu-title="Administrative">
 
                         {{--Payments--}}
                         @if(Qs::userIsTeamAccount())
@@ -86,7 +86,7 @@
 
                         </li>
                         @endif
-                    </ul>
+                    </ul> -->
 
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Delays">
                         {{--Manage Delays--}}
